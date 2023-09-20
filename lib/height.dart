@@ -1,7 +1,8 @@
+import 'dart:io';
 import 'dart:ui';
 
-import 'package:age/helper.dart';
 import 'package:age/weight.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -20,37 +21,85 @@ class _HeightFemState extends State<HeightFem> {
   double selectedHeight = 4.0;
 
   late InterstitialAd _interstitialAd;
+  String? unitIdFinal;
+
+  final CollectionReference _products =
+      FirebaseFirestore.instance.collection("products");
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     _createInterstitialAd();
+    _showInterstitialAd();
   }
 
-  void _createInterstitialAd() {
-    InterstitialAd.load(
-      adUnitId: AdHelper.interstitialAdUnitId,
-      request: const AdRequest(),
-      adLoadCallback: InterstitialAdLoadCallback(
-        onAdLoaded: (ad) => _interstitialAd = ad,
-        onAdFailedToLoad: (LoadAdError error) => print("error ads"),
-      ),
-    );
+  void _createInterstitialAd() async {
+    try {
+      final doc = await FirebaseFirestore.instance
+          .collection("products")
+          .doc('LFR4ax48biMcaEgN8xRk')
+          .get();
+      if (doc.exists) {
+        final unitId = doc['androidInterstatile'] as String?;
+        final iosInterstitial = doc['IosInterstatile'] as String;
+
+        if (Platform.isAndroid) {
+          unitIdFinal = unitId;
+        } else if (Platform.isIOS) {
+          unitIdFinal = iosInterstitial;
+        } else {
+          // Handle other platforms if needed
+          unitIdFinal =
+              null; // Set to null or handle differently as per your requirement
+        }
+        if (unitIdFinal != null) {
+          InterstitialAd.load(
+            adUnitId: unitIdFinal!,
+            request: const AdRequest(),
+            adLoadCallback: InterstitialAdLoadCallback(
+              onAdLoaded: (ad) => _interstitialAd = ad,
+              onAdFailedToLoad: (LoadAdError error) =>
+                  print("Error loading ad: $error"),
+            ),
+          );
+        } else {
+          print('unitId is null or not found in Firestore');
+        }
+      } else {
+        print('Document does not exist');
+      }
+    } catch (error) {
+      print('Error retrieving data from Firebase: $error');
+    }
   }
 
   void _showInterstitialAd() {
-    if (_interstitialAd != null) {
-      _interstitialAd!.fullScreenContentCallback =
-          FullScreenContentCallback(onAdDismissedFullScreenContent: (ad) {
-        ad.dispose();
-        _createInterstitialAd();
-      }, onAdFailedToShowFullScreenContent: (ad, error) {
-        ad.dispose();
-        _createInterstitialAd();
-      });
-      _interstitialAd!.show();
-    }
+    // Fetch the value of 'intad' from Firebase Firestore
+    _products.doc('LFR4ax48biMcaEgN8xRk').get().then((doc) {
+      if (doc.exists) {
+        final intadValue = doc['intad'];
+
+        // Check if 'intad' is equal to 1
+        if (intadValue == 1) {
+          if (_interstitialAd != null) {
+            _interstitialAd!.fullScreenContentCallback =
+                FullScreenContentCallback(onAdDismissedFullScreenContent: (ad) {
+              ad.dispose();
+              _createInterstitialAd();
+            }, onAdFailedToShowFullScreenContent: (ad, error) {
+              ad.dispose();
+              _createInterstitialAd();
+            });
+            _interstitialAd!.show();
+          }
+        }
+      } else {
+        print('Document does not exist');
+      }
+    }).catchError((error) {
+      print('Error retrieving data from Firebase: $error');
+    });
   }
 
 //   @override

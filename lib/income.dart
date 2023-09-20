@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:age/ads/openad.dart';
 import 'package:age/ffinal.dart';
 import 'package:age/helper.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -22,15 +23,12 @@ class _IncomeState extends State<Income> {
   String selectedIncomeString = '5 k'; // Default selected income
   double selectedIncome = 5.0; // Default selected income value
 
-  RewardedAd? _rewardedAd;
-  int _rewardedScore = 0;
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    _createRewardedAd();
-    _showRewardedAd();
+    // _createRewardedAd();
+    // _showRewardedAd();
     _loadAndShowAd();
   }
 
@@ -39,35 +37,63 @@ class _IncomeState extends State<Income> {
     ShowAppAd.showAd();
   }
 
-  void _createRewardedAd() {
-    RewardedAd.load(
-      adUnitId: AdHelper.rewardedAdUnitId!,
-      request: const AdRequest(),
-      rewardedAdLoadCallback: RewardedAdLoadCallback(
-        onAdLoaded: (ad) => setState(() => _rewardedAd = ad),
-        onAdFailedToLoad: (error) => setState(() => _rewardedAd = null),
-      ),
-    );
-  }
+  // void _createRewardedAd() async {
+  //   try {
+  //     final doc = await FirebaseFirestore.instance
+  //         .collection("products")
+  //         .doc('LFR4ax48biMcaEgN8xRk')
+  //         .get();
+  //     if (doc.exists) {
+  //       final rewardadunitId = doc['openAd'] as String?;
+  //       if (rewardadunitId != null) {
+  //         RewardedAd.load(
+  //           adUnitId: rewardadunitId,
+  //           request: const AdRequest(),
+  //           rewardedAdLoadCallback: RewardedAdLoadCallback(
+  //             onAdLoaded: (ad) => setState(() => _rewardedAd = ad),
+  //             onAdFailedToLoad: (error) => setState(() => _rewardedAd = null),
+  //           ),
+  //         );
+  //       } else {
+  //         print('unitId is null or not found in Firestore');
+  //       }
+  //     } else {
+  //       print('Document does not exist');
+  //     }
+  //   } catch (error) {
+  //     print('Error retrieving data from Firebase: $error');
+  //   }
+  // }
 
-  void _showRewardedAd() {
-    if (_rewardedAd != null) {
-      _rewardedAd!.fullScreenContentCallback =
-          FullScreenContentCallback(onAdDismissedFullScreenContent: (ad) {
-        ad.dispose();
-        _createRewardedAd();
-      }, onAdFailedToShowFullScreenContent: (ad, error) {
-        ad.dispose();
-        _createRewardedAd();
-      });
-      _rewardedAd!.show(
-        onUserEarnedReward: (ad, reward) => setState(
-          () => _rewardedScore++,
-        ),
-      );
-      _rewardedAd = null;
-    }
-  }
+  // void _showRewardedAd() {
+  //   _products.doc('LFR4ax48biMcaEgN8xRk').get().then((doc) {
+  //     if (doc.exists) {
+  //       final intadValue = doc['intad'];
+  //       if (intadValue == 1) {
+  //         if (_rewardedAd != null) {
+  //           _rewardedAd!.fullScreenContentCallback =
+  //               FullScreenContentCallback(onAdDismissedFullScreenContent: (ad) {
+  //             ad.dispose();
+  //             _createRewardedAd();
+  //           }, onAdFailedToShowFullScreenContent: (ad, error) {
+  //             ad.dispose();
+  //             _createRewardedAd();
+  //           });
+  //           _rewardedAd!.show(
+  //             onUserEarnedReward: (ad, reward) => setState(
+  //               () => _rewardedScore++,
+  //             ),
+  //           );
+  //           _rewardedAd = null;
+  //         }
+  //       }
+  //     } else {
+  //       print('Document does not exist');
+  //     }
+  //   }).catchError((error) {
+  //     print('Error retrieving data from Firebase: $error');
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -147,7 +173,7 @@ class _IncomeState extends State<Income> {
 
                         ElevatedButton(
                           onPressed: () {
-                            _showRewardedAd();
+                            // _showRewardedAd();
                             Navigator.push(
                               context,
                               MaterialPageRoute(

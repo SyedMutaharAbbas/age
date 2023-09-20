@@ -80,7 +80,7 @@ class Abb extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 10,
                 ),
                 Center(
                   child: Container(
@@ -94,57 +94,61 @@ class Abb extends StatelessWidget {
                           bottomRight: Radius.circular(0)),
                     ),
                     constraints:
-                        BoxConstraints.tightForFinite(width: 360, height: 200),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Age:  $ageSelected",
-                          style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Martial Status:   $martialstatusselected",
-                          style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Color:   $favcolor",
-                          style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Annual income:   $dreamsalary k per year",
-                          style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Weight:   $favweight lbs (Pounds)",
-                          style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Height:  $favheight feet tall",
-                          style: TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(height: 30),
-                      ],
+                        BoxConstraints.tightForFinite(width: 360, height: 206),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 30, top: 8),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Age:  $ageSelected",
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "Martial Status:   $martialstatusselected",
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "Color:   $favcolor",
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "Annual income:   $dreamsalary k per year",
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "Weight:   $favweight lbs (Pounds)",
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "Height:  $favheight feet tall",
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold),
+                          ),
+                          // SizedBox(height: 20),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -153,7 +157,7 @@ class Abb extends StatelessWidget {
                     children: [
                       Container(
                         constraints: BoxConstraints.tightForFinite(
-                            width: 360, height: 340),
+                            width: 360, height: 342),
                         decoration: BoxDecoration(
                           shape: BoxShape.rectangle,
                           color: Color.fromARGB(255, 223, 97, 235)
