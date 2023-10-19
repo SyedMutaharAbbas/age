@@ -1,4 +1,4 @@
-package com.example.age
+package com.femaledelusioncalculator.age.calculator.femaledelusioncalculator
 
 import io.flutter.embedding.android.FlutterActivity
 

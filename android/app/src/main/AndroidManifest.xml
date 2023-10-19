@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.age">
-   <application
+    package="com.femaledelusioncalculator.age.calculator.femaledelusioncalculator">
+
+
+    <application
         android:label="Female Delusion Calculator"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

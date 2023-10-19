@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:age/HomeScreen.dart';
 import 'package:age/main.dart';
 import 'package:flutter/material.dart';
 
@@ -171,7 +172,7 @@ class Abb extends StatelessWidget {
                         child: Column(
                           children: [
                             // Text(
-                            //   "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                            //   "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                             //   textAlign: TextAlign.center,
                             //   style: TextStyle(
                             //       fontSize: 15, fontWeight: FontWeight.bold),
@@ -203,7 +204,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -245,7 +246,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -287,7 +288,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -329,7 +330,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -371,7 +372,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -413,7 +414,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -455,7 +456,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -497,7 +498,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -539,7 +540,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -581,7 +582,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -623,7 +624,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -665,7 +666,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -707,7 +708,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -749,7 +750,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -791,7 +792,7 @@ class Abb extends StatelessWidget {
                                     height: 10,
                                   ),
                                   Text(
-                                    "According to data model, the probability a guy of the Pakistan male population ages you want is meets your standards is",
+                                    "According to data model, the probability a guy of the U.S male population ages you want is meets your standards is",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontSize: 15,
@@ -827,7 +828,8 @@ class Abb extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const MyApp()));
+                                builder: (context) =>
+                                    const MyHomePage(title: "")));
                       },
                       style: ElevatedButton.styleFrom(
                         primary:

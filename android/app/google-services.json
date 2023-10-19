@@ -76,6 +76,42 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148701989229:android:906fec0c8de06649993264",
+        "android_client_info": {
+          "package_name": "com.femaledelusioncalculator.age.calculator.femaledelusioncalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148701989229-kv4l72jho4rrj1gpu0m5oq20muu2cj5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMHk1tWkh2TCNMm8ne18Eu_QgS6_c0c_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148701989229-kv4l72jho4rrj1gpu0m5oq20muu2cj5n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "148701989229-2tl8s3t3p5dik14mkp6vovjsc65gfra9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.t2"
+              }
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"
