@@ -6,6 +6,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 class ShowAppAd {
   static AppOpenAd? _appOpenAd;
 
+  ///
   static Future<void> loadOpenAd() async {
     try {
       final doc = await FirebaseFirestore.instance
